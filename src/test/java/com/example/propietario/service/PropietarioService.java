@@ -77,7 +77,8 @@ class PropietarioServiceTest {
                 "1",
                 TipoPropietario.NATURAL,
                 EstadoCuenta.ACTIVO,
-                EstadoBusqueda.BUSCANDO
+                EstadoBusqueda.BUSCANDO,
+                "image"
         );
 
         // 2. Act
@@ -98,7 +99,8 @@ class PropietarioServiceTest {
 
         PropietarioRequestDto request = new PropietarioRequestDto(
                 "Fade", emailRepetido, "+569", "Direccion", "S", "1",
-                TipoPropietario.NATURAL, EstadoCuenta.ACTIVO, EstadoBusqueda.BUSCANDO
+                TipoPropietario.NATURAL, EstadoCuenta.ACTIVO, EstadoBusqueda.BUSCANDO, "image"
+
         );
 
         // 2. Act & 3. Assert
