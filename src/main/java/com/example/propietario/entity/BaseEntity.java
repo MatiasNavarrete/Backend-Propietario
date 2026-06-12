@@ -29,4 +29,7 @@ public class BaseEntity {
     @Column(name = "is_active", nullable = false)
     private boolean is_active = true;
 
+    public BaseEntity() {
+    }
+
 }
