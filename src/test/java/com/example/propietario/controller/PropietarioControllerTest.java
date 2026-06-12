@@ -48,7 +48,6 @@ class PropietarioControllerTest {
         objectMapper = new ObjectMapper(); // Para transformar el DTO a JSON
         propietarioId = UUID.randomUUID();
 
-        // El DTO que enviamos (Request)
         requestDto = new PropietarioRequestDto(
                 "Fade",
                 "fade@example.com",
@@ -62,7 +61,7 @@ class PropietarioControllerTest {
                 "image"
         );
 
-        // El DTO que devuelve (Response)
+
         responseDto = new PropietarioResponseDto(
                 propietarioId,
                 "Fade",
@@ -98,10 +97,10 @@ class PropietarioControllerTest {
     @Test
     @DisplayName("POST /api/v1/propietario debería registrar y retornar 201 CREATED")
     void register_ShouldReturnCreated() throws Exception {
-        // Tu método se llama register, no save
+
         when(propietarioService.register(any(PropietarioRequestDto.class))).thenReturn(responseDto);
 
-        // Enviamos un JSON puro usando ObjectMapper, calzando perfecto con tu @RequestBody
+
         mockMvc.perform(post("/api/v1/propietario")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(requestDto)))
