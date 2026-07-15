@@ -24,6 +24,9 @@ public class Propietario extends BaseEntity {
     @Column(nullable = false)
     private String name;
 
+    @Column(nullable = false)
+    private String mascotaNombre;
+
     @Column(nullable = false, unique = true)
     private String email;
 

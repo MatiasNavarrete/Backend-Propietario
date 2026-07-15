@@ -10,6 +10,7 @@ public record PropietarioResponseDto(
 
         UUID id,
         String name,
+        String mascotaNombre,
         String email,
         String phoneNumber,
         String address,
